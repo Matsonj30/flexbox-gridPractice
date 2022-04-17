@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox & Grid Basics</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+<div class = formContainer>
+     <form action="">
+        <div class="formRows">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="formRows">
+            <label for="age">Age&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="age">
+        </div>  
+    </form>
+</div>
+<div class="boxesContainer">
+    <div class ="boxes">
+        <h1>First Box</h1>
+        <p>This is the first box, it can be sorted with other boxes in CSS with Order:(1,2,3). Likewise, we can use padding to give white
+            space around each box. You can also use max-width of the parent container if the text inside
+            of this box needs to wrap to a specific size such as 1500px in this example.
+        </p>
+    </div>
+    <div class ="boxes">
+        <h1>Second Box</h1>
+        <p>This is the second box, We can use a class name in css such as .box:nth-child(#){background-color} to set a specific background color 
+            for that number child with the class name boxes, this just allows us to avoid using more specific id's and makes the html cleaner
+        </p>
+    </div>
+    <div class ="boxes">
+        <h1>Third Box</h1>
+        <p>This is the first box, it can be sorted with other boxes in CSS with Order:(1,2,3). Likewise, we can use padding to give white
+            space around each box. 
+        </p>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(144, 140, 164);
+}
+.formContainer{
+    padding: 10px;
+    border: 2px solid black;
+    margin: 50px auto; /** space from the top **/
+    width: 600px;
+    background-color: white;
+    height: 65px;
+}
+.formRows{
+     display: flex;
+     padding: 5px;
+}
+.formRows input{ /** can specify what element of formRows i guess **/
+    flex: 1; 
+}
+.formRows label{
+    padding-right: 10px;
+}
+.boxesContainer{
+    width: 1500px; /** use max-width if next needs to wrap**/
+    height: 200px;
+    margin: 50px auto;
+    display: flex;
+    align-content: space-between;
+}
+.boxes{
+    width: 30%;
+    flex:1;
+    padding: 10px;
+    background-color: white;
+}
+.boxes:nth-child(1){background-color: rgb(240, 167, 31);}
+.boxes:nth-child(2){background-color: rgba(172, 255, 47, 0.9);}
+.boxes:nth-child(3){background-color: rgb(190, 38, 190);}
