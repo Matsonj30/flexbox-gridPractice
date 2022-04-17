@@ -21,17 +21,49 @@ body{
 }
 .boxesContainer{
     width: 1500px; /** use max-width if next needs to wrap**/
-    height: 200px;
     margin: 50px auto;
     display: flex;
-    align-content: space-between;
+    justify-content: space-between;
+    
 }
 .boxes{
-    width: 30%;
-    flex:1;
+    box-sizing: border-box;
+    flex-basis: 30%; /** same as width**/
     padding: 10px;
-    background-color: white;
 }
 .boxes:nth-child(1){background-color: rgb(240, 167, 31);}
 .boxes:nth-child(2){background-color: rgba(172, 255, 47, 0.9);}
-.boxes:nth-child(3){background-color: rgb(190, 38, 190);}
+.boxes:nth-child(3){background-color: rgb(200, 19, 200);}
+
+.paraContainer{
+  width:1480px;
+  background-color: white;  
+  margin: auto;
+  display: flex;
+  padding: 10px;
+}
+.rightCol{
+    flex:1;
+    order: 3;
+    padding: 10px;
+}
+
+.leftCol{
+    flex:1;
+    order:1;
+    padding: 10px;
+}
+.middleCol{
+    flex:2;
+    order:2;
+    padding: 10px;
+}
+.leftCol h1{
+    text-align: center;
+}
+.rightCol h1{
+    text-align: center;
+}
+.middleCol h1{
+    text-align: center;
+}
