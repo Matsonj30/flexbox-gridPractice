@@ -1,14 +1,31 @@
+html, body {
+    padding: 0;
+    margin: 0;
+  }
 body{
     background-color: rgb(144, 140, 164);
 }
+h1{
+    text-align: center;
+}
+
+/** HEADER **/
+.headerContainer{
+    width: 100%;
+    display: flex;
+}
+
+
+/** FORM **/
 .formContainer{
     padding: 10px;
     border: 2px solid black;
     margin: 50px auto; /** space from the top **/
-    width: 600px;
+    max-width: 600px;
     background-color: white;
     height: 65px;
 }
+
 .formRows{
      display: flex;
      padding: 5px;
@@ -19,11 +36,17 @@ body{
 .formRows label{
     padding-right: 10px;
 }
+
+
+
+
+
+
+/** BOXES **/
 .boxesContainer{
-    width: 1500px; /** use max-width if next needs to wrap**/
+    max-width: 1500px; /** use max-width if next needs to wrap**/
     margin: 50px auto;
-    display: flex;
-    justify-content: space-between;
+   
     
 }
 .boxes{
@@ -35,8 +58,20 @@ body{
 .boxes:nth-child(2){background-color: rgba(172, 255, 47, 0.9);}
 .boxes:nth-child(3){background-color: rgb(200, 19, 200);}
 
+@media (min-width: 900px){
+    .boxesContainer{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+/** PARAGRAPH **/ 
 .paraContainer{
-  width:1480px;
+  max-width:1480px;
   background-color: white;  
   margin: auto;
   display: flex;
@@ -58,12 +93,18 @@ body{
     order:2;
     padding: 10px;
 }
-.leftCol h1{
-    text-align: center;
+.pictureContainer{
+    margin: 50px auto;
+    display: flex;
+    max-width: 1460px;
+    padding: 20px;
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-.rightCol h1{
-    text-align: center;
-}
-.middleCol h1{
-    text-align: center;
+
+.fixed-size-image{
+    padding: 10px;
+    width: 450px;
+    height: 300px;
 }
