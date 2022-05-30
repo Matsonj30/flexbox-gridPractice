@@ -6,6 +6,9 @@
     --background:rgb(144, 140, 164);
     --orange:rgb(240, 167, 31);
 }
+*{
+    margin: 0;
+}
 html, body {
     padding: 0;
     margin: 0;
@@ -177,8 +180,9 @@ h1{
 
 .homes-grid-container{
     background-color: var(--violet);
-    grid-template-columns: repeat(4, 390px);
-    grid-template-rows: repeat(10, 250px);
+ /*    grid-template-columns: repeat(4, 390px); */
+    grid-template-columns: minmax(250px, 390px) minmax(250px, 390px) minmax(250px, 390px) minmax(250px, 390px);
+    
     grid-gap: 15px;
     max-width: 1600px;
     display: grid;
@@ -195,16 +199,43 @@ h1{
     "h5 h5 d5 d5"
     "h5 h5 b5 b5"
 }
-@media (max-width: 1024px){
-    .homes-grid-container{
-        grid-template-columns: repeat(2, 300px);
-    }
+@media (max-width: 900px){/*  when below 950 px */
+
     
+    .homes-grid-container{
+        grid-template-columns: minmax(250px, 390px) minmax(250px, 390px);
+        grid-template-areas: 
+    "h1 h1"
+    "h1 h1"
+    "d1 d1"
+    "b1 b1"
+    "h2 h2"
+    "h2 h2"
+    "d2 d2"
+    "b2 b2"
+    "h3 h3"
+    "h3 h3"
+    "d3 d3"
+    "b3 b3"
+    "h4 h4"
+    "h4 h4"
+    "d4 d4"
+    "b4 b4"
+    "h5 h5"
+    "h5 h5"
+    "d5 d5"
+    "b5 b5"
+    
+    }
+    .menuContainer{
+        flex-direction: column;
+    }
 }
 .home-item{
     width: 100%;
-    height: 100%;
+    height: auto;
     margin: 10px;
+    background-size: contain; /* maintains aspect ratio */
     outline: 3px solid black;
 }
 .home-1{
@@ -242,10 +273,12 @@ h1{
 }
 .homes-grid-container p{
     margin-left: 15px;
-    font-size: 25px;
+    font-size: min(25px, 2.4vw);
     width: 75%;
     justify-self: center;
 }
+
+
 .b1{
     grid-area:b1;
 }
@@ -265,12 +298,12 @@ h1{
     grid-area:b5;
 }
 .homes-grid-container button{
-    width: 50%;
-    height: 50%;
+    width: clamp(300px, 1.5vw, 350px) ;
+    height: clamp(75px, 1.5vw, 150px);
     justify-self: center;
     align-self: center;
     background-color: var(--violet);
-    font-size: 40px;
+    font-size: clamp(30px, 40px, 50px);
     font-family: monospace;
     font-weight: bold;
     border-radius: 15px;
